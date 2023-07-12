@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/car-pool-city/static/css/main.e6c13ad2.css",
+    "main.js": "/car-pool-city/static/js/main.8b86dff9.js",
+    "index.html": "/car-pool-city/index.html",
+    "main.e6c13ad2.css.map": "/car-pool-city/static/css/main.e6c13ad2.css.map",
+    "main.8b86dff9.js.map": "/car-pool-city/static/js/main.8b86dff9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.8b86dff9.js"
+  ]
+}
