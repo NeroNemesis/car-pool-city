@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/car-pool-city/static/css/main.7d2c0788.css",
-    "main.js": "/car-pool-city/static/js/main.e984158a.js",
+    "main.js": "/car-pool-city/static/js/main.8e51dc34.js",
     "index.html": "/car-pool-city/index.html",
     "main.7d2c0788.css.map": "/car-pool-city/static/css/main.7d2c0788.css.map",
-    "main.e984158a.js.map": "/car-pool-city/static/js/main.e984158a.js.map"
+    "main.8e51dc34.js.map": "/car-pool-city/static/js/main.8e51dc34.js.map"
   },
   "entrypoints": [
     "static/css/main.7d2c0788.css",
-    "static/js/main.e984158a.js"
+    "static/js/main.8e51dc34.js"
   ]
 }
