@@ -49,17 +49,17 @@ function App() {
   return (
     <div>
       <ConnectionProvider>
-        {!isConnexionPage && <Navbar/>}
-          <div className="flex-container mb-5">
-            <DriverProvider>
-              <TQProvider>
-                <TranslationProvider>
-                  {useNavigation()}
-                </TranslationProvider>
-              </TQProvider>
-            </DriverProvider>
-          </div>
-        {!isConnexionPage && <Footer/>}
+        <TranslationProvider>
+          {!isConnexionPage && <Navbar/>}
+            <div className="flex-container mb-5">
+              <DriverProvider>
+                <TQProvider>
+                    {useNavigation()}
+                </TQProvider>
+              </DriverProvider>
+            </div>
+          {!isConnexionPage && <Footer/>}
+        </TranslationProvider>
       </ConnectionProvider>
     </div>
   );
