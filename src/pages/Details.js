@@ -60,11 +60,6 @@ const Details = () => {
                         setShowToolTip(false);
                 }
             }
-            else
-            {
-                setShowToolTip(false)
-                disableConfirmationBtn(false);
-            }
         }
     }, [driver, dayChecked, confirmationBtnDisabled])
 
@@ -77,10 +72,7 @@ const Details = () => {
         if(confirmationBtn != null)
         {
             confirmationBtn.addEventListener('click', () => {
-                if(!confirmationBtn.disabled)
-                {
-                    h.push(rootPrefix + `/confirmation/${driver.name.split(" ")[0]}`)
-                } 
+                h.push(rootPrefix + `/confirmation/${driver.name.split(" ")[0]}`)
             })
         }
     }, [confirmationBtn])

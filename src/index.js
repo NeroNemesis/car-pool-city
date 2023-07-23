@@ -26,5 +26,3 @@ $(function(){
       $(this).addClass("active");
   });
 });
-
-var isConnected = false;

@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import { ConnectionProvider } from "./constants/ConnectionContext";
 import { DriverProvider } from "./constants/DriverContext";
 import { TQProvider } from "./constants/TQContext";
+import { TranslationProvider } from "./constants/TranslationContext";
 
 function App() {
   const isConnexionPage = document.location.href.includes('connexion');
@@ -52,7 +53,9 @@ function App() {
           <div className="flex-container mb-5">
             <DriverProvider>
               <TQProvider>
-                {useNavigation()}
+                <TranslationProvider>
+                  {useNavigation()}
+                </TranslationProvider>
               </TQProvider>
             </DriverProvider>
           </div>
