@@ -1,17 +1,35 @@
 {
+  "homepage": "https://neronemesis.github.io/car-pool-city",
   "name": "car-pool-city",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "classnames": "^2.3.2",
+    "datetime-picker": "^0.6.0",
+    "jquery": "^3.7.0",
     "react": "^18.2.0",
+    "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "react-smooth": "^2.0.3",
+    "react-time-picker": "^6.2.0",
+    "react-transition-group": "^4.4.5",
+    "react-usestateref": "^1.0.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.16",
+    "gh-pages": "^5.0.0"
   }
 }

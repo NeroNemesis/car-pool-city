@@ -1,0 +1,45 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+          "source": "PowerShell",
+          "icon": "terminal-powershell",
+          "args": ["-ExecutionPolicy", "Bypass"]
+        }
+      },
+      "terminal.integrated.defaultProfile.windows": "PowerShell",
+      "workbench.colorTheme": "Kimbie Dark",
+      "html-css-class-completion.enableEmmetSupport": true,
+      "tailwindCSS.emmetCompletions": true,
+      "emmet.triggerExpansionOnTab": true,
+      "files.associations": {"*html": "html"},
+      "emmet.useInlineCompletions": true,
+      "emmet.showSuggestionsAsSnippets": true,
+      "editor.snippetSuggestions": "top",
+      "html-css-class-completion.HTMLLanguages": [
+
+        "html",
+        "vue",
+        "razor",
+        "blade",
+        "handlebars",
+        "twig",
+        "django-html",
+        "php",
+        "markdown",
+        "erb",
+        "ejs",
+        "svelte"
+      ],
+      "html-css-class-completion.JavaScriptLanguages": [
+
+        "javascript",
+        "javascriptreact",
+        "typescriptreact"
+      ],
+      "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+      },
+      "tailwindCSS.includeLanguages": {
+        "\"javascript\"": "\"javascriptreact\""
+      },
+}

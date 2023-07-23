@@ -1,15 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas, faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter, faFontAwesome, faFacebook, faReddit, faSquareInstagram } from '@fortawesome/free-brands-svg-icons'
+import { BrowserRouter as Router} from 'react-router-dom';
+import $ from 'jquery';
 import './index.css';
 import App from './App';
+
+library.add(fas, faTwitter, faFontAwesome, faFacebook, faReddit, faSquareInstagram, faCircleQuestion)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+//Changing nav section onclick
+$(function(){
+  $(document).on('click', '.nav-red', function(){
+      $('.nav-red').removeClass("active");
+      $(this).addClass("active");
+  });
+});
+
+var isConnected = false;

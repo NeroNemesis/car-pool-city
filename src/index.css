@@ -1,13 +1,855 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body
+{
+  font-family: 'Rubik';
+  background-color: #FAF8EF;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flex-container
+{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.flex-container2
+{
+    display: flex;
+    min-height: 40vh;
+    flex-direction: row;
+}
+
+.flex-container3
+{
+    display: flex;
+    min-height: 40vh;
+    flex-direction: column;
+}
+
+#blueCar
+{
+  width: 54.3vmin;
+  height: 25.4vmin;
+}
+
+#arrowBlue
+{
+  height: 11.9vmin;
+  width: 3.2vmin;
+}
+
+#arrowBlue {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 0.5s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+#how video
+{
+  width: 80vmin;
+  height: 40vmin;
+}
+
+.howTitle
+{
+  font-weight: bold;
+}
+
+.howText
+{
+  text-align: justify;
+}
+
+.progressBar
+{
+  counter-reset: step;
+}
+
+.progressBar h4
+{
+  font-size: 4.5vmin !important;
+}
+
+.progressBar li
+{
+  list-style-type: none;
+  float: left;
+  width: 33.3%;
+  position: relative;
+  text-align: center;
+}
+
+.progressBar li:before
+{
+  content: counter(step);
+  counter-increment: step;
+  width: 6vmin;
+  height: 6vmin;
+  line-height: 6vmin;
+  border: 0.2vmin solid #C30606;
+  display: block;
+  text-align: center;
+  margin: 0 auto 1em auto;
+  border-radius: 50%;
+  background-color: #C30606;
+  color: #FAF8EF;
+}
+
+.progressBar li:after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.2vmin;
+  background-color: #C30606;
+  top: 3vmin;
+  left: -50%;
+  z-index: -1;
+}
+
+.progressBar li:first-child:after
+{
+  content: none;
+}
+
+.home-title
+{
+  font-size: 4.5vmin;
+  font-weight: bolder;
+}
+
+.howIcon
+{
+  font-size: 15vmin;
+}
+
+.nav-link
+{
+  font-size: 2.5vmin;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.active
+{
+  border-bottom: 2px solid #C30606;
+}
+
+.nav-brand img
+{
+  width: 100%;
+  height: auto;
+}
+
+#red-wheel
+{
+  width: 3.7vmin;
+  height: 3.43vmin;
+  flex-shrink: 0;
+}
+
+.logo
+{
+  width: 27.5vmin;
+  height: 4.5vmin;
+}
+
+.home-text
+{
+  font-size: 5vmin;
+}
+
+.stepper
+{
+  width: 6vmin;
+  height: 6vmin;
+  line-height: 6vmin;
+  border: 0.2vmin solid #C30606;
+  background-color: #C30606;
+  display: flex;
+  text-align: center;
+  color: #FAF8EF;
+  margin: 0 auto 1em auto;
+  border-radius: 50%;
+}
+
+.stepper2
+{
+  width: 4vmin;
+  height: 4vmin;
+  line-height: 4vmin;
+  border: 0.2vmin solid #C30606;
+  background-color: #C30606;
+  display: flex;
+  text-align: center;
+  color: #FAF8EF;
+  margin: 0 auto 1em auto;
+  border-radius: 50%;
+}
+
+#driverIcon
+{
+  margin-left: 0.3vmin;
+}
+
+.searchInput svg {
+  position: absolute;
+  display: inline-block;
+  margin-left: 0.5vmin;
+}
+
+.searchInput {
+  margin-bottom: 0.1vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.searchIcon
+{
+  position: relative;
+  padding: 0.1vmin;
+  font-size: 4vmin;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.input-field {
+  border-radius: 12px;
+  border: 2px solid #C30606;
+  background-color: #FAF8EF;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  width: 100%;
+  padding-left: 5vmin;
+  height: 6vmin;
+  font-size: 2.2vmin;
+}
+
+.input-field2 {
+  border-radius: 12px;
+  border: 2px solid #C30606;
+  background-color: #FAF8EF;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  width: 100%;
+  padding-left: 5vmin;
+  height: 6vmin;
+  font-size: 2.2vmin;
+}
+
+.react-datepicker__input-container
+{
+  position: unset !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+}
+
+.react-datepicker-wrapper
+{
+  margin-bottom: 0 !important;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+#time-input1:before {
+  content: 'Départ à:';
+  margin-right: .6em;
+  color: #9d9d9d;
+}
+
+#time-input2:before {
+  content: 'Arivée avant:';
+  margin-right: .6em;
+  color: #9d9d9d;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 6.0vmin;
+  height: 3.9vmin;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FAF8EF;
+  border: 1px solid black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2.6vmin;
+  width: 2.6vmin;
+  left: 0.4vmin;
+  bottom: 0.4vmin;
+  background-color: #FAF8EF;
+  border: 2px solid black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(2.6vmin);
+  -ms-transform: translateX(2.6vmin);
+  transform: translateX(2.6vmin);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;  
+}
+::-moz-placeholder {
+  font-style: italic;  
+}
+:-ms-input-placeholder {  
+  font-style: italic; 
+}
+
+.redArrow
+{
+  width: 14.93vmin;
+  height: 2.64vmin;
+}
+
+#searchButton:hover > .redArrow {
+  -webkit-animation: mover2 1s infinite  alternate;
+  animation: mover2 0.5s infinite  alternate;
+}
+@-webkit-keyframes mover2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
+}
+@keyframes mover2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
+}
+
+.searchButton2
+{
+  border-radius: 12px;
+  background-color: #1E4E98;
+  color: #FAF8EF;
+}
+
+#sendBtn
+{
+  width: 35.68vmin;
+  height: 5.94vmin;
+  border-radius: 20px;
+  flex-shrink: 0;
+  background: #1E4E98;
+  color: #FAF8EF;
+}
+
+#sendBtnSvg
+{
+  width: 9.51vmin;
+  flex-shrink: 0;
+}
+
+.gold-arrow
+{
+  width: 5.2vmin;
+  flex-shrink: 0;
+}
+
+.filter-logo
+{
+  width: 7.13vmin;
+  height: 6.60vmin;
+  flex-shrink: 0;
+}
+
+.redArrow2
+{
+  width: 8.05vmin;
+  height: 3.17vmin;
+  flex-shrink: 0;
+}
+
+.sr-text
+{
+  font-size: 4vmin;
+  font-weight: 400;
+}
+
+.sr-text2
+{
+  font-size: 3vmin;
+  font-weight: 400;
+}
+
+.sr-note
+{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3.17vmin;
+}
+
+.sr-note2
+{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.17vmin;
+}
+
+.driver-box
+{
+  border-radius: 20px;
+  border: 3px solid #C30606;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #FAF8EF;
+  width: 100%;
+  height: 32.9vmin;
+  flex-shrink: 0;
+}
+
+.driver-img
+{
+  width: 25.9vmin;
+  height: 22.59vmin;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+.driver-title
+{
+  font-size: 3.6vmin;
+  font-weight: 400;
+}
+
+.driver-txt
+{
+  font-size: 3.17vmin;
+  font-weight: 400;
+}
+
+.card
+{
+  flex-direction: row;
+}
+
+.driver-book-btn
+{
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+#toggleUp
+{
+  width: 3.17vmin;
+  height: 4.75vmin;
+}
+
+#toggleDown
+{
+  height: 3.17vmin;
+  width: 4.75vmin;
+}
+
+.con-div
+{
+  border-radius: 20px;
+  border: 3px solid #C30606;
+  width: 108.85vmin;
+  height: 58.65vmin;
+  flex-shrink: 0;
+}
+
+.con-row
+{
+  width: 108.85vmin;
+}
+
+.con-input
+{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #FAF8EF;
+  border: 3px solid #C30606;
+  border-radius: 20px;
+  width: 88.5vmin;
+  height: 7.9vmin;
+  flex-shrink: 0;
+  display: block;
+}
+
+.con-top-div label
+{
+  width: 88.5vmin;
+}
+
+.con-top-div
+{
+  min-width: 108.85vmin;
+  min-height: 58.65vmin;
+}
+
+.con-col
+{
+  display: grid;
+  place-content: center;
+}
+
+.con-btn
+{
+  border-radius: 20px;
+  background: #1E4E98;
+  width: 37.78vmin;
+  height: 7.4vmin;
+  flex-shrink: 0;
+  color: #FAF8EF;
+}
+
+#con-prev-arr
+{
+  width: 8.58vmin;
+}
+
+#con-next-arr
+{
+  width: 8.58vmin;
+  height: 3.17vmin;
+}
+
+#details-page-title
+{
+  font-size: 5.34vmin;
+  font-style: italic;
+  font-weight: 400;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#red-line
+{
+  width: 80%;
+  height: 0.4vmin;
+  background-color: #C30606;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#details
+{
+  width: 80%;
+}
+
+.vertical-red-line
+{
+  width: 0.4vmin;
+  height: 6.34vmin;
+  background-color: #C30606;
+}
+
+#red-star
+{
+  width: 4.34vmin;
+  height: 4.13vmin;
+}
+
+#confirmation-btn:disabled
+{
+  background-color: #C5C4C7 !important;
+}
+
+.contact-input
+{
+  width: 87.45vmin;
+  border-radius: 20px;
+  border: 3px solid #C30606;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #FAF8EF;
+  flex-shrink: 0;
+  display: block;
+}
+
+#userMail
+{
+  height: 7.9vmin;
+}
+
+#userText
+{
+  height: 31.57vmin;
+}
+
+footer
+{
+  border: 2px solid #C30606;
+  background-color: #D2D0C5;
+}
+
+.footer-title
+{
+  font-size: 4vmin;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+}
+
+.footer-text
+{
+  font-size: 3vmin;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.footer-icon
+{
+  font-size: 3.5vmin;
+  margin-left: 2%;
+}
+
+.footer-col
+{
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.footer-link
+{
+  text-decoration: none;
+  color: black;
+}
+
+.footer-logo
+{
+  width: 24.83vmin;
+  height: 3.56vmin;
+}
+
+@media only screen and (max-width:768px) {
+  .nav-item
+  {
+    text-align: right !important;
+  }
+
+  #account-btn
+  {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width:968px) {
+  #colToHide
+  {
+    display: none;
+  }
+
+  #colToMove
+  {
+    justify-content: center !important;
+  }
+
+  #colToMove a
+  {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1em !important;
+  }
+
+  .hRow
+  {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:1096px) {
+  .footer-brand-row, .sr-row1
+  {
+    flex-direction: column;
+  }
+
+  .col-one
+  {
+    display: block;
+    order: 1;
+    justify-content: center !important;
+  }
+
+  .col-two
+  {
+    display: block !important;
+    order: 2;
+    text-align: center;
+  }
+
+  #displayString
+  {
+    margin-top: 1em;
+  }
+
+  #priceTxt
+  {
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width:818px) {
+  .footer-row
+  {
+    flex-direction: column !important;
+  }
+
+  .footer-col
+  {
+    width: -moz-fiit-content;
+    width: fit-content;
+    padding-left: 1em !important;
+  }
+}
+
+@media only screen and (max-width:836px) {
+  .progressBar li
+  {
+    float: none;
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  .progressBar li:after
+  {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:1112px) {
+  .trajet-details
+  {
+    flex-direction: column;
+  }
+  
+  .details-last-col
+  {
+    justify-content: start !important;
+  }
+
+  #second-details-col
+  {
+    margin-top: 1.5em;
+  }
+}
+
+@media only screen and (max-width:1236px) {
+
+  .leftRighSearchRow, .middleSearchRow
+  {
+    flex-direction: column;
+  }
+
+  .middleSearchRow
+  {
+    width: 100%;
+  }
+
+  .leftRighSearchRow div
+  {
+    margin-bottom: 1em;
+  }
+
+  .middleSearchCol
+  {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width:1334px) {
+
+  .card
+  {
+    flex-direction: column;
+  }
+
+  .driver-box
+  {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-body .row
+  {
+    flex-direction: column;
+  }
+
+  .card-body .row .col
+  {
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width:516px) {
+  .topSearchRow
+  {
+    flex-direction: column;
+  }
+
+  .middleSearchCol
+  {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .searchInput
+  {
+    padding-right: 0;
+  }
+
+  .middleSearchRow
+  {
+    width: auto;
+  }
 }
