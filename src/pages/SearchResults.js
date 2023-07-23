@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import Search from '../components/shared/Search';
 import Driver from '../components/pages/SearchResults/Driver';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useReducer } from 'react';
 import { jsonServerRoot } from '../constants/global';
 import TQContext from '../constants/TQContext';
 
@@ -14,6 +14,8 @@ const SearchResults = () => {
     const [error, setError] = useState(null);
     const { TQ } = useContext(TQContext);
     const [localUrl, setLocalUrl] = useState(null);
+    const [, forceUpdate] = useReducer(x => x + 1, 0);
+    const [refresh, setRefresh] = useState(false);
 
     //pagination
     const [currentPage, setCurrentPage] = useState(1);
@@ -21,6 +23,7 @@ const SearchResults = () => {
     const indexOfLastRecord = currentPage * recordsPerPage;
     const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
     const currentRecords = Drivers ? Drivers.slice(indexOfFirstRecord, indexOfLastRecord) : [];
+    const [indexOfLastPageLastRecord, setIndexOfLastPageLastRecord] = useState(currentPage * currentRecords.length);
     const nPages = Drivers ? Math.ceil(Drivers.length / recordsPerPage) : -1;
     const totalRecords = Drivers ? Drivers.length : -1;
     const [displayString, setDisplayString] = useState("");
@@ -205,14 +208,14 @@ const SearchResults = () => {
                 })
         }, (1000));
     }
-    , []);
+    , [refresh]);
 
     useEffect(() => {
         if(currentPage === nPages)
-            setDisplayString(`Affichage des résultats ${currentRecords.find(x => x).id} à ${currentRecords.findLast(x => x).id} de ${totalRecords}`)
+            setDisplayString(`Affichage des résultats ${indexOfFirstRecord +1} à ${Drivers.length} de ${totalRecords}`)
         else
             setDisplayString(`Affichage des résultats ${indexOfFirstRecord +1} à ${indexOfLastRecord} de ${totalRecords}`)
-    }, [currentRecords, indexOfFirstRecord, indexOfLastRecord])
+    }, [currentRecords, indexOfFirstRecord, Drivers, totalRecords])
 
     useEffect(() => {
         if(document.getElementById('rating') !== null && document.getElementById('experience') !== null && document.getElementById('price') !== null)
@@ -247,6 +250,15 @@ const SearchResults = () => {
     const changeShowFilters = () => {
         setShowFilters(!showFilters);
     }
+
+    useEffect(() => {
+        if(document.getElementById('searchPage-search') != null)
+        {
+            document.getElementById('searchPage-search').addEventListener('click', () => {
+                setRefresh(!refresh);
+            });
+        }
+    }, [TQ])
       
     return ( 
         <>

@@ -173,7 +173,7 @@ const Search = (props) => {
                     {!props.isSearchPage && <button id='searchButton' className='bg-transparent border-0 home-title mt-5 mx-auto' type='submit'>
                         C'est parti ! <img className='redArrow' src={process.env.PUBLIC_URL + '/Images/arrowRedRight.jpg'} alt="red arrow" />
                     </button>}
-                    {props.isSearchPage && <button className='mt-5 mx-auto searchButton2 driver-txt' style={{fontSize: "2.6vmin"}} type='submit'>
+                    {props.isSearchPage && <button id="searchPage-search" className='mt-5 mx-auto searchButton2 driver-txt' style={{fontSize: "2.6vmin"}} type='submit'>
                         Rechercher&nbsp;&nbsp;
                         <svg className='gold-arrow' xmlns="http://www.w3.org/2000/svg" width="64" height="24" viewBox="0 0 64 24" fill="none">
                             <path d="M63.1332 13.0607C63.719 12.4749 63.719 11.5251 63.1332 10.9393L53.5873 1.3934C53.0015 0.807611 52.0517 0.807611 51.4659 1.3934C50.8801 1.97919 50.8801 2.92893 51.4659 3.51472L59.9512 12L51.4659 20.4853C50.8801 21.0711 50.8801 22.0208 51.4659 22.6066C52.0517 23.1924 53.0015 23.1924 53.5873 22.6066L63.1332 13.0607ZM0 13.5H62.0725V10.5H0L0 13.5Z" fill="#FCDE67"/>
