@@ -18,7 +18,7 @@ const Navbar = () => {
 
     useEffect(() => {
         localUrl = window.location.pathname;
-    }, [window.location.pathname])
+    }, [translation])
 
     useEffect(() => {
         if(document.getElementById('con') !== null)
