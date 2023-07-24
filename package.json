@@ -16,6 +16,7 @@
     "datetime-picker": "^0.6.0",
     "jquery": "^3.7.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
@@ -25,6 +26,7 @@
     "react-time-picker": "^6.2.0",
     "react-transition-group": "^4.4.5",
     "react-usestateref": "^1.0.8",
+    "rsuite": "^5.37.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
