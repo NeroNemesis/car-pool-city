@@ -91,12 +91,12 @@ const Navbar = () => {
                         </li>}
                         {isContactPage &&
                             <li className="nav-item">
-                                <div className="d-flex nav-link">
+                                <div className="d-flex nav-link" id="translation-div">
                                     <label className="switch mb-1">
                                         <input id='translation-switch' type="checkbox" value={isEnglish} />
                                         <span className="slider round"></span>
                                     </label> 
-                                    <p className='my-auto ms-2' style={{fontSize: "2.6vmin"}} id='prating'>
+                                    <p className='my-auto ms-2 pb-3' style={{fontSize: "2.6vmin"}} id='prating'>
                                         { isEnglish ? translation.french : translation.english }
                                     </p>
                                 </div>

@@ -679,6 +679,16 @@ footer
   {
     margin-left: auto;
   }
+
+  #con
+  {
+    margin-left: auto;
+  }
+
+  #translation-div
+  {
+    justify-content: end !important;
+  }
 }
 
 @media only screen and (max-width:968px) {
