@@ -64,18 +64,6 @@ const Navbar = () => {
     }, [isEnglish, isContactPage]);
 
     const CustomToggle = forwardRef(({ children, onClick }, ref) => (
-        // <a
-        //   href=""
-        //   ref={ref}
-        //   onClick={(e) => {
-        //     e.preventDefault();
-        //     onClick(e);
-        //   }}
-        // >
-        //   {children}
-        //   &#x25bc;
-        // </a>
-        
         <button ref={ref} onClick={(e) => {e.preventDefault(); onClick(e);}} id='account-btn' className='border-0 bg-transparent nav-link'>
             {children}
         </button>
@@ -129,13 +117,16 @@ const Navbar = () => {
                         {isContactPage &&
                             <li className="nav-item">
                                 <div className="d-flex nav-link" id="translation-div">
+                                    {isEnglish && <p className='my-auto pb-3 me-2' style={{fontSize: "2.6vmin"}} id='prating'>
+                                        { translation.french }
+                                    </p>}
                                     <label className="switch mb-1">
                                         <input id='translation-switch' type="checkbox" value={isEnglish} />
                                         <span className="slider round"></span>
                                     </label> 
-                                    <p className='my-auto ms-2 pb-3' style={{fontSize: "2.6vmin"}} id='prating'>
-                                        { isEnglish ? translation.french : translation.english }
-                                    </p>
+                                    {!isEnglish && <p className='my-auto ms-2 pb-3' style={{fontSize: "2.6vmin"}} id='prating'>
+                                        { translation.english }
+                                    </p>}
                                 </div>
                             </li>
                         }
